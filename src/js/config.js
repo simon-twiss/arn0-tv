@@ -12,21 +12,25 @@
  * inputs: HDMI ports shown in the second row. Set `hdmi` to the port each device is plugged into.
  */
 window.LAUNCHER_CONFIG = {
+    // To ADD an app: add one line below. { match: 'name' } is easiest (case-insensitive, matched
+    //   against the app's name and id). Use { id: '...' } if two apps share a name.
+    // To REMOVE an app: delete its line (or comment it out). Order here = order on screen.
+    // Don't know an app's id? Open "All apps" on the TV; the id of the focused app is shown at the bottom.
     apps: [
-        { id: 'xvvl3S1TT1.TizenTubeStandalone', label: 'YouTube', brand: 'youtube' },
-        { id: 'rJeHak5zRg.Spotify', label: 'Spotify' },
-        { id: 'Jz7aUrV2Q4.Twitch', label: 'Twitch' },
-        { id: 'E0P3lRI4H7.MYTF1', label: 'TF1+' },
+        { id: 'org.tizen.tv-viewer', label: 'Live TV', brand: 'livetv' },
         { id: 'org.tizen.netflix-app', label: 'Netflix' },
         { id: 'org.tizen.primevideo', label: 'Prime Video' },
         { id: 'MCmYXNxgcu.DisneyPlus', label: 'Disney+' },
-        { id: 'com.samsung.tv.aria-video', label: 'Apple TV' }
+        { id: 'com.samsung.tv.aria-video', label: 'Apple TV' },
+        { match: 'hbo|max', label: 'HBO Max', brand: 'max' },
+        { match: 'youtube', label: 'YouTube', brand: 'youtube' },
+        { match: 'crunchyroll', label: 'Crunchyroll' },
+        { id: 'org.tizen.browser', label: 'Browser', brand: 'browser' }
     ],
 
+    // HDMI ports shown in the second row.
     inputs: [
-        { hdmi: 1, label: 'Nintendo Switch 2', brand: 'switch' },
-        { hdmi: 2, label: 'PlayStation 5', brand: 'playstation' },
-        { hdmi: 4, label: 'Xbox Series X', brand: 'xbox' }
+        { hdmi: 1, label: 'PlayStation 5', brand: 'playstation' }
     ],
 
     // How an input tile switches the TV. See README "HDMI inputs".

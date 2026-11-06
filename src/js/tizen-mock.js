@@ -29,6 +29,9 @@
         app('RtveTvApp0.RTVEPlay', 'RTVE Play'),
         app('Atresplay0.atresplayer', 'atresplayer'),
         app('org.tizen.browser', 'Internet'),
+        app('org.tizen.tv-viewer', 'TV'),
+        app('HboMax0000.HBOMax', 'HBO Max'),
+        app('Crunchyrol.Crunchyroll', 'Crunchyroll'),
         // Noise that the consumer filter should hide
         app('com.samsung.tv.ep-dataservice-app', 'ep-dataservice-app'),
         app('adplatform.ADPlayer', 'ADPlayer'),
@@ -38,8 +41,8 @@
     ];
 
     var sources = {
-        connected: [{ type: 'TV', number: 1 }, { type: 'HDMI', number: 2 }, { type: 'HDMI', number: 4 }],
-        disconnected: [{ type: 'HDMI', number: 1 }, { type: 'HDMI', number: 3 }]
+        connected: [{ type: 'TV', number: 1 }, { type: 'HDMI', number: 1 }],
+        disconnected: [{ type: 'HDMI', number: 2 }, { type: 'HDMI', number: 3 }, { type: 'HDMI', number: 4 }]
     };
     var currentSource = sources.connected[0];
 
